@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>📊 Match Score: {{ score }}%</h2>
+
+    <h3>✅ Resume Skills</h3>
+    <ul>
+        {% for skill in resume_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>📌 Job Skills</h3>
+    <ul>
+        {% for skill in job_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>❌ Missing Skills</h3>
+    <ul>
+        {% for skill in missing_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>🤖 Feedback</h3>
+    <pre>{{ feedback }}</pre>
+
+    <a href="/">⬅ Analyze Another Resume</a>
+</div>
+
+</body>
+</html>
